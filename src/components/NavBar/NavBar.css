@@ -1,0 +1,63 @@
+.navbar {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(214, 3, 196, 0.527);
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.brand {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.categories .category {
+  width: 150px;
+  list-style: none;
+  border-radius: 5px;
+  margin-right: 50px;
+  background-color: rgba(214, 3, 196, 0.527);
+  display: flex;
+  flex-direction: column;
+}
+.category p{
+  margin: 0;
+  padding: 10px;
+}
+.img-category{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.img-category img{
+  width: 80%;
+}
+.cartwidget {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.cartwidget p{
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.carritoRojo {
+  color: black;
+}
+.carritoVerde{
+  color: rgba(255, 0, 128, 0.904)
+}

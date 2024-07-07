@@ -1,26 +1,29 @@
-import './App.css'
-import phone from "./img/phone.jpeg"
-import NavBar from './components/NavBar'
-import Titulo from './components/Ejemplos/Titulo'
-import EjemploContador from './components/Ejemplos/EjemploContador'
-import ItemContainer from './components/Ejemplos/ItemContainer'
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Error from "./components/Ejemplos/Error";
+import { CartProvider } from "./context/CartContext";
+import Carrito from "./components/Carrito/Carrito";
 
 function App() {
-  const styleDiv = { backgroundColor: "purple" }
+  return (
+    <BrowserRouter>
+      <CartProvider>
+        <NavBar />
 
-  const saludo = "Bienvenidos a mi ecommerce"
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
+          <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<Carrito />} />
 
-  const saludar = () => {
-    alert("Ejecutando funcion desde App")
-  }
-
-  return(
-    <div>
-      <NavBar />
-      <ItemContainer />
-      
-    </div>
-  )
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </CartProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
