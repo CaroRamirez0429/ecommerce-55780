@@ -30,16 +30,16 @@
   display: flex;
   flex-direction: column;
 }
-.category p{
+.category p {
   margin: 0;
   padding: 10px;
 }
-.img-category{
+.img-category {
   width: 100%;
   display: flex;
   justify-content: right;
 }
-.img-category img{
+.img-category img {
   width: 80%;
 }
 .cartwidget {
@@ -50,7 +50,7 @@
   justify-content: center;
   text-decoration: none;
 }
-.cartwidget p{
+.cartwidget p {
   padding: 0 10px;
   font-size: 20px;
 }
@@ -58,6 +58,6 @@
 .carritoRojo {
   color: black;
 }
-.carritoVerde{
-  color: rgba(255, 0, 128, 0.904)
+.carritoVerde {
+  color: rgba(255, 0, 128, 0.904);
 }

@@ -13,7 +13,10 @@ const CartProvider = ({ children }) => {
       //sumar la cantidad nueva
       const productosModificados = carrito.map((productoCarrito) => {
         if (productoCarrito.id === producto.id) {
-          return { ...productoCarrito, cantidad: productoCarrito.cantidad + producto.cantidad };
+          return {
+            ...productoCarrito,
+            cantidad: productoCarrito.cantidad + producto.cantidad,
+          };
         } else {
           return productoCarrito;
         }
@@ -32,14 +35,20 @@ const CartProvider = ({ children }) => {
   };
 
   const cantidadTotal = () => {
-    const cantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    const cantidad = carrito.reduce(
+      (total, producto) => total + producto.cantidad,
+      0
+    );
     return cantidad;
   };
 
   const precioTotal = () => {
-    const precio = carrito.reduce( (total, producto) => total + (producto.cantidad * producto.precio), 0)
-    return precio
-  }
+    const precio = carrito.reduce(
+      (total, producto) => total + producto.cantidad * producto.precio,
+      0
+    );
+    return precio;
+  };
 
   const vaciarCarrito = () => {
     setCarrito([]);
@@ -54,7 +63,14 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ carrito, agregarProducto, cantidadTotal, vaciarCarrito, borrarProductoPorId, precioTotal }}
+      value={{
+        carrito,
+        agregarProducto,
+        cantidadTotal,
+        vaciarCarrito,
+        borrarProductoPorId,
+        precioTotal,
+      }}
     >
       {children}
     </CartContext.Provider>

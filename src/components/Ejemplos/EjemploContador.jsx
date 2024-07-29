@@ -8,21 +8,21 @@ const EjemploContador = ({ stock }) => {
 
   //se ejecuta solo al montar el componente
   //ej: llamadas a apis, suscripciones a eventListenter
-  useEffect( () => {
-    console.log("1er useEffect")
-  }, [] )
+  useEffect(() => {
+    console.log("1er useEffect");
+  }, []);
 
   //se ejecuta en el montaje y cada vez que la variable "contador" se actualice
   //ej: para realizar acciones especificas cuando una variable dependiente cambie
-  useEffect( () => {
-    console.log("2do useEffect")
-  }, [contador] )
+  useEffect(() => {
+    console.log("2do useEffect");
+  }, [contador]);
 
   //se ejecuta en el montaje y cada vez que se actualice cualquier estado de mi componente
   //ej: operaciones globales de monitoreo o registro, actualizaciones generales del componente
-  useEffect( () => {
-    console.log("3er useEffect")
-  })
+  useEffect(() => {
+    console.log("3er useEffect");
+  });
 
   const aumentarContador = () => {
     //contador = contador + 1
@@ -38,8 +38,8 @@ const EjemploContador = ({ stock }) => {
   };
 
   const cambiarValorToggle = () => {
-    setToggle( !toggle )
-  }
+    setToggle(!toggle);
+  };
 
   return (
     <div>
@@ -50,11 +50,9 @@ const EjemploContador = ({ stock }) => {
       />
 
       <p> Booleano: {toggle.toString()} </p>
-      <button onClick={cambiarValorToggle} >Cambiar valor toggle</button>
+      <button onClick={cambiarValorToggle}>Cambiar valor toggle</button>
 
-      {
-        toggle && <Titulo texto="hola" numero={3}  />
-      }
+      {toggle && <Titulo texto="hola" numero={3} />}
     </div>
   );
 };

@@ -3,8 +3,8 @@ const Contador = ({ contador, aumentarContador, disminuirContador }) => {
     <div>
       <button onClick={disminuirContador}>-</button>
       <p>Contador: {contador} </p>
-      <button onClick={aumentarContador} >+</button>
+      <button onClick={aumentarContador}>+</button>
     </div>
-  )
-}
-export default Contador
+  );
+};
+export default Contador;

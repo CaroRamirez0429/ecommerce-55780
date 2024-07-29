@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
 import { BiSolidCart } from "react-icons/bi";
 
 const CartWidget = () => {
   return (
     <div>
       <img src="" alt="" />
-      <p> <BiSolidCart /> </p>
+      <p>
+        {" "}
+        <BiSolidCart />{" "}
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default CartWidget
+export default CartWidget;

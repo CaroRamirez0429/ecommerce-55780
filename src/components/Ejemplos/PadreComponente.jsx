@@ -1,9 +1,4 @@
 const PadreComponente = ({ children }) => {
-
-  return (
-    <div>
-      { children }
-    </div>
-  )
-}
-export default PadreComponente
+  return <div>{children}</div>;
+};
+export default PadreComponente;

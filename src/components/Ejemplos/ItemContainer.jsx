@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ItemContainer = () => {
-  return (
-    <div>
-      ItemContainer
-    </div>
-  )
-}
+  return <div>ItemContainer</div>;
+};
 
-export default ItemContainer
+export default ItemContainer;

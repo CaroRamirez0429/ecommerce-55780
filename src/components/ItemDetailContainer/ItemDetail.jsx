@@ -6,21 +6,22 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ producto }) => {
-
-  const { agregarProducto } = useContext(CartContext)
+  const { agregarProducto } = useContext(CartContext);
 
   const agregarAlCarrito = (contador) => {
     const productoCarrito = {
       ...producto,
-      cantidad: contador
-    }
+      cantidad: contador,
+    };
 
-    agregarProducto(productoCarrito)
-  }
+    agregarProducto(productoCarrito);
+  };
 
   return (
     <div className="item-detail">
-      <img src={producto.imagen} alt="" />
+      <div>
+        <img src={producto.imagen} alt="" />
+      </div>
       <div className="detail">
         <h2>{producto.nombre}</h2>
         <p>{producto.descripcion}</p>
